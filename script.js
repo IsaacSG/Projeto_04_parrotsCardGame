@@ -1,5 +1,5 @@
 let numero = Number(prompt("Digite um numero par, maior ou igual a 4 e menor ou igual a 14"));
-
+let contador = 0;
 while (numero < 4 || numero > 14 || numero % 2 !== 0) {
     numero = Number(prompt("Digite um numero par, maior ou igual a 4 e menor ou igual a 14"));
 }
@@ -44,6 +44,7 @@ adicionarCartas();
 
 function virarCarta(elemento) {
     elemento.classList.add("virar");
+    contador++;
     if (document.querySelectorAll(".virar").length%2 !== 0) {
         elemento.classList.add("virada");
         
@@ -71,5 +72,8 @@ function virarCarta(elemento) {
 
         }
     }
-
+    console.log(numero)
+    if(document.querySelectorAll(".virar").length == numero ){
+        alert(`Você ganhou em ${contador} jogadas!`);
+    }
 }
