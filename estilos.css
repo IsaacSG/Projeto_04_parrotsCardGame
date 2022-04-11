@@ -63,11 +63,11 @@ ul {
     transform: rotateY(180deg);
   }
 
-  .cartas:active .conteudo-carta {
+  .cartas.virar .conteudo-carta {
     transform: rotateY(0deg);
   }
 
-  .cartas:active .frente-carta {
+  .cartas.virar .frente-carta {
     transform: rotateY(-180deg);
   }
 
